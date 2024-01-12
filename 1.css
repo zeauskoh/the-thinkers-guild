@@ -1,0 +1,95 @@
+body {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background: #000000;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+
+  #container {
+    position: absolute;
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  #character {  
+    animation: fadeIn 2s forwards;
+
+    max-width: 500px;
+    height: auto;
+    opacity: 0;
+    position: relative;
+    top: 0;
+    animation: characterAppear 2s forwards;
+  }
+
+  #text-container {
+    font-family: monospace;
+    color: #fff;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s;
+    font-size: 23px;
+    letter-spacing: 2px;
+    line-height: 40px;
+  }
+
+  #enter-button {
+    position: absolute;
+    color: #fff;
+    display: none;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards 0.5s;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 2px;
+
+    border: 3px solid #007bff;
+    border-radius: 10px;
+    background-color: #007bff;
+    padding: 13px 50px;
+    transition: 0.3s all ease-in-out;
+  }
+
+  #enter-button:hover {
+    background-color: transparent;
+    color: #ffffff;
+    transition: 0.3s all ease-in-out;
+  }
+
+  @keyframes characterAppear {
+    from {
+      max-width: 0;
+      opacity: 0;
+      top: 100px;
+    }
+    to {
+      max-width: 300px;
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
