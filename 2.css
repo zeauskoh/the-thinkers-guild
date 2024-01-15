@@ -16,6 +16,7 @@ body {
     transition: opacity 3s ease-in-out;
     color: #ffffff;
     letter-spacing: 2px;
+    transition: 0.3s ease-in-out;
   }
 
   #container {
@@ -40,11 +41,25 @@ body {
     order: 1; /* Move the image to the left */
   }
 
-  #textContainer {
+  #textContainer { 
     position: relative;
     margin-left: 20px;
     color: #ffffff;
-    order: 2; /* Move the image to the right */
+    font-size: 22px;
+    margin: 0;
+    display: inline-block;
+    overflow: hidden; /* Hide overflow text */
+    width: 1000px;
+    line-height: 30px;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
   }
 
   #startButton {
@@ -72,7 +87,7 @@ body {
     width: 150px;
 
     border: 3px solid #007bff;
-    border-radius: 10px;
+    border-radius: 6px;
     background-color: #007bff;
     padding: 10px 30px;
     transition: opacity 1s ease-in-out;
@@ -82,4 +97,5 @@ body {
   #startButton:hover {
     background-color: transparent;
     transition: 0.3s ease-in-out;
+    color: #2e93ff;
   }
