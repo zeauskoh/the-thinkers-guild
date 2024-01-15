@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Thinkers Guild</title>
+    <link rel="stylesheet" href="3.css">
+</head>
+<body>
+
+    <!--<div id="chapterName">Lesson 1: Asking Questions</div>
+    <div id="question">Loading question...</div>
+    <input type="text" id="answer1" placeholder="Answer 1" oninput="checkInputs()">
+    <input type="text" id="answer2" placeholder="Answer 2" oninput="checkInputs()">
+    <input type="text" id="answer3" placeholder="Answer 3" oninput="checkInputs()">
+    <button id="nextBtn" onclick="nextQuestion()" disabled>Next</button>-->
+
+    <!--const questions = [
+    { question: "Who are You?" },
+    // Add more questions as needed
+];
+
+let currentQuestionIndex = 0;
+
+function displayQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    const questionElement = document.getElementById('question');
+    questionElement.innerText = currentQuestion.question;
+    questionElement.style.display = 'block';
+    setTimeout(() => {
+        fadeInAndMoveUp(document.getElementById('answer1'), 600);
+        fadeInAndMoveUp(document.getElementById('answer2'), 1200);
+        fadeInAndMoveUp(document.getElementById('answer3'), 1800);
+        document.getElementById('nextBtn').style.display = 'block';
+    }, 2000);
+}
+
+function fadeInAndMoveUp(element, delay) {
+    setTimeout(() => {
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+        element.style.transition = '0.3s ease-in-out'
+        element.style.marginLeft = '0px'
+    }, delay);
+}
+
+function checkInputs() {
+    const answer1 = document.getElementById('answer1').value;
+    const answer2 = document.getElementById('answer2').value;
+    const answer3 = document.getElementById('answer3').value;
+
+    const allHaveQuestionMark = [answer1, answer2, answer3].every(answer => answer.includes('?'));
+    document.getElementById('nextBtn').disabled = !allHaveQuestionMark;
+}
+
+function nextQuestion() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        displayQuestion();
+        resetInputs();
+    } else {
+        alert('Game Over! You completed all questions.');
+        // You may want to reset the game or redirect the user to another page
+    }
+}
+
+function resetInputs() {
+    document.getElementById('answer1').value = '';
+    document.getElementById('answer2').value = '';
+    document.getElementById('answer3').value = '';
+    document.getElementById('nextBtn').disabled = true;
+}
+
+// Display the first question when the page loads
+displayQuestion();-->
+
+<div id="progress-bar">
+    <div id="boy"></div>
+    <div id="chest"></div>
+  </div>
+  
+  <div id="question-container">
+    <div id="question">Who are You?</div>
+    <input type="text" id="answer-input" placeholder="Your next question...">
+    <button id="next-btn" onclick="nextQuestion()">Next</button>
+  </div>
+
+    <script src="3.js"></script>
+</body>
+</html>
